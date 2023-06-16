@@ -15,9 +15,11 @@ while true
 
     break
 
-      elsif czarwonica.chomp == "zapisz"
+  elsif czarwonica.chomp == "zapisz"
 
-        File.write("rzeczczarwonicy.txt", rzeczy_czarwonicy)
+    for zapis in rzeczy_czarwonicy[0..50]
+      File.write("rzeczczarwonicy.txt", zapis)
+    end
 
       elsif czarwonica.chomp == "wczytaj"
 
