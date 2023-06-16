@@ -17,8 +17,10 @@ while true
 
   elsif czarwonica.chomp == "zapisz"
 
+    File.write("rzeczczarwonicy.txt", nil)
+
     for zapis in rzeczy_czarwonicy[0..50]
-      File.write("rzeczczarwonicy.txt", zapis)
+      File.write("rzeczczarwonicy.txt", zapis + "\n", mode: "a")
     end
 
       elsif czarwonica.chomp == "wczytaj"
