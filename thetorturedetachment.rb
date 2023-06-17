@@ -7,7 +7,7 @@ while true
     puts "Ale nie jednocześnie, proszu"
     puts "A teraz to jeszcze wczytać możesz, widzisz"
 
-  czarwonica = gets
+  czarwonica = gets.chomp
 
       puts czarwonica.downcase!
 
@@ -20,12 +20,12 @@ while true
     File.write("rzeczczarwonicy.txt", nil)
 
     for zapis in rzeczy_czarwonicy[0..50]
-      File.write("rzeczczarwonicy.txt", zapis + "\n", mode: "a")
+      File.write("rzeczczarwonicy.txt", zapis + ("\n"), mode: "a")
     end
 
       elsif czarwonica.chomp == "wczytaj"
 
-        rzeczy_czarwonicy = File.read("rzeczczarwonicy.txt").split
+        rzeczy_czarwonicy = File.read("rzeczczarwonicy.txt").split("\n")
 
             else
 
