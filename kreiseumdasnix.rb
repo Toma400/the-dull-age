@@ -1,7 +1,7 @@
 ekwipuneczek = ["zielona roślinka lecznicza"]
 pinionszki = 100
 
-def sklep (pinionszki2, ekwipuneczek2)
+  def sklep (ekwipuneczek2, pinionszki2)
 
   while true
 
@@ -45,6 +45,8 @@ def sklep (pinionszki2, ekwipuneczek2)
 
     puts "A pokasz mje stan konta po sklepie: #{pinionszki2}"
 
+    return pinionszki2
+
   end
 
 end
@@ -60,11 +62,13 @@ while true
 
   if giereczkowacz.chomp == "sklep"
 
-    sklep(pinionszki2, ekwipuneczek2)
+    sklep(ekwipuneczek, pinionszki)
 
           for rzeczułka in ekwipuneczek
             puts rzeczułka
           end
+
+    pinionszki = sklep(ekwipuneczek, pinionszki)
 
     puts "A pinionszków masz tyle #{pinionszki}"
 
