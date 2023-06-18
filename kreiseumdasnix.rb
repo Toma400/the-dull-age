@@ -18,26 +18,13 @@ pinionszki = 100
 
           kupiowarz = gets.chomp.to_i
 
-          if kupiowarz == 1
+          if 0 < kupiowarz and kupiowarz <= sklep_rzeczy.length()
 
-            puts "Kupiono #{sklep_rzeczy[0]}"
+            puts "Kupiono #{sklep_rzeczy[kupiowarz-1]}"
+            ekwipuneczek2 << sklep_rzeczy[kupiowarz-1]
 
-                ekwipuneczek2 << "zbroja z (żywych) rybiczków, które Cię kochają"
-                      pinionszki2 = pinionszki2 - 30
+            pinionszki2 -= 5
 
-          elsif kupiowarz == 2
-
-            puts "Kupiono #{sklep_rzeczy[1]}"
-
-                  ekwipuneczek2 << "eliksir zwinności kitka"
-                      pinionszki2 = pinionszki2 - 10
-
-          elsif kupiowarz == 3
-
-            puts "Kupiono #{sklep_rzeczy[2]}"
-
-                    ekwipuneczek2 << "miecz z dziwnymi napisami z nixa"
-                    pinionszki2 = pinionszki2 - 20
           end
 
        else sklepiowarz.chomp == "nie" or kupiowarz.chomp == "nie"
