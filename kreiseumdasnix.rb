@@ -16,19 +16,25 @@ pinionszki = 100
 
               puts "To masz zamiar coś kupić, czy się tak patrzać tylko? Co kcesz?"
 
-          kupiowarz = gets.chomp
+          kupiowarz = gets.chomp.to_i
 
-          if kupiowarz.include? "zbroja"
+          if kupiowarz == 1
+
+            puts "Kupiono #{sklep_rzeczy[0]}"
 
                 ekwipuneczek2 << "zbroja z (żywych) rybiczków, które Cię kochają"
                       pinionszki2 = pinionszki2 - 30
 
-                elsif kupiowarz.include? "eliksir"
+          elsif kupiowarz == 2
+
+            puts "Kupiono #{sklep_rzeczy[1]}"
 
                   ekwipuneczek2 << "eliksir zwinności kitka"
                       pinionszki2 = pinionszki2 - 10
 
-                  elsif kupiowarz.include? "miecz"
+          elsif kupiowarz == 3
+
+            puts "Kupiono #{sklep_rzeczy[2]}"
 
                     ekwipuneczek2 << "miecz z dziwnymi napisami z nixa"
                     pinionszki2 = pinionszki2 - 20
@@ -42,8 +48,6 @@ pinionszki = 100
           for rzecz in ekwipuneczek2
             puts rzecz
           end
-
-    puts "A pokasz mje stan konta po sklepie: #{pinionszki2}"
 
     return pinionszki2
 
