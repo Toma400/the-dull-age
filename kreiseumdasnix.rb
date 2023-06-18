@@ -1,7 +1,7 @@
 ekwipuneczek = ["zielona roślinka lecznicza"]
 pinionszki = 100
 
-def sklep (ekwipuneczek = [], pinionszki = 100)
+def sklep (pinionszki2, ekwipuneczek2)
 
   while true
 
@@ -20,18 +20,18 @@ def sklep (ekwipuneczek = [], pinionszki = 100)
 
           if kupiowarz.include? "zbroja"
 
-                ekwipuneczek << "zbroja z (żywych) rybiczków, które Cię kochają"
-                      pinionszki = pinionszki - 30
+                ekwipuneczek2 << "zbroja z (żywych) rybiczków, które Cię kochają"
+                      pinionszki2 = pinionszki2 - 30
 
                 elsif kupiowarz.include? "eliksir"
 
-                  ekwipuneczek << "eliksir zwinności kitka"
-                      pinionszki = pinionszki - 10
+                  ekwipuneczek2 << "eliksir zwinności kitka"
+                      pinionszki2 = pinionszki2 - 10
 
                   elsif kupiowarz.include? "miecz"
 
-                    ekwipuneczek << "miecz z dziwnymi napisami z nixa"
-                       pinionszki = pinionszki - 20
+                    ekwipuneczek2 << "miecz z dziwnymi napisami z nixa"
+                    pinionszki2 = pinionszki2 - 20
           end
 
        else sklepiowarz.chomp == "nie" or kupiowarz.chomp == "nie"
@@ -39,11 +39,11 @@ def sklep (ekwipuneczek = [], pinionszki = 100)
         break
 
       end
-          for rzecz in ekwipuneczek
+          for rzecz in ekwipuneczek2
             puts rzecz
           end
 
-    puts "A pokasz mje stan konta po sklepie: #{pinionszki}"
+    puts "A pokasz mje stan konta po sklepie: #{pinionszki2}"
 
   end
 
@@ -60,15 +60,11 @@ while true
 
   if giereczkowacz.chomp == "sklep"
 
-    puts sklep()
+    sklep(pinionszki2, ekwipuneczek2)
 
-    ekwipuneczek << sklep(ekwipuneczek)
-
-    puts pinionszki = pinionszki - sklep(pinionszki).to_i
-
-    for rzeczułka in ekwipuneczek
-      puts rzeczułka
-    end
+          for rzeczułka in ekwipuneczek
+            puts rzeczułka
+          end
 
     puts "A pinionszków masz tyle #{pinionszki}"
 
