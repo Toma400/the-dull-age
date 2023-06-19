@@ -18,6 +18,8 @@ def sklep (ekwipuneczek2, pinionszki2)
 
           kupiowarz = gets.chomp.to_i
 
+                if pinionszki2 > 5
+
           if 0 < kupiowarz and kupiowarz <= sklep_rzeczy.length()
 
                 puts "Kupiono #{sklep_rzeczy[kupiowarz-1]}"
@@ -26,12 +28,20 @@ def sklep (ekwipuneczek2, pinionszki2)
                 pinionszki2 -= 5
 
           end
+                else
+
+                  puts "No to co kce kupować, jak ni ma pinionszków, niech idzie i zarobi, hę?"
+
+                end
 
       elsif sklepiowarz.to_s.chomp == "nie"
 
         break
 
       end
+
+    puts "Rzeczułki, które masz w ekwipuneczku, to:"
+
           for rzecz in ekwipuneczek2
             puts rzecz
           end
