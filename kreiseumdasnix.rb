@@ -50,12 +50,6 @@ while true
 
   if giereczkowacz.chomp == "sklep"
 
-    sklep(ekwipuneczek, pinionszki)
-
-          for rzeczułka in ekwipuneczek
-            puts rzeczułka
-          end
-
     pinionszki = sklep(ekwipuneczek, pinionszki)
 
     puts "A pinionszków masz tyle #{pinionszki}"
