@@ -1,7 +1,7 @@
 ekwipuneczek = ["zielona roślinka lecznicza"]
 pinionszki = 100
 
-  def sklep (ekwipuneczek2, pinionszki2)
+def sklep (ekwipuneczek2, pinionszki2)
 
   while true
 
@@ -18,16 +18,16 @@ pinionszki = 100
 
           kupiowarz = gets.chomp.to_i
 
-          if 0 < kupiowarz and kupiowarz <= sklep_rzeczy.length()
+      if 0 < kupiowarz and kupiowarz <= sklep_rzeczy.length()
 
             puts "Kupiono #{sklep_rzeczy[kupiowarz-1]}"
             ekwipuneczek2 << sklep_rzeczy[kupiowarz-1]
 
             pinionszki2 -= 5
 
-          end
+      end
 
-       else sklepiowarz.chomp == "nie" or kupiowarz.chomp == "nie"
+      elsif sklepiowarz.to_s.chomp == "nie" or kupiowarz.to_s.chomp == "nie"
 
         break
 
@@ -35,11 +35,8 @@ pinionszki = 100
           for rzecz in ekwipuneczek2
             puts rzecz
           end
-
-    return pinionszki2
-
   end
-
+        return pinionszki2
 end
 
 
