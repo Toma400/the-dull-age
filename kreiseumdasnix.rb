@@ -1,5 +1,5 @@
 ekwipuneczek = ["zielona roślinka lecznicza"]
-pinionszki = 100
+pinionszki = 0
 
 def sklep (ekwipuneczek2, pinionszki2)
 
@@ -40,11 +40,18 @@ def sklep (ekwipuneczek2, pinionszki2)
 
       end
 
+    sleep(2)
+    puts "~~~~~~~~~~-o-~~~~~~~~~~"
+
     puts "Rzeczułki, które masz w ekwipuneczku, to:"
 
           for rzecz in ekwipuneczek2
             puts rzecz
           end
+
+    sleep(2)
+    puts "~~~~~~~~~~-o-~~~~~~~~~~"
+
   end
         return pinionszki2
 end
@@ -68,19 +75,31 @@ def wioska(pinionszki3)
             puts "Przynosisz dziwen staruszcze 10 marchewek. Jest bardzo szczęśliw i Ci dziękuje"
                   pinionszki3 = pinionszki3 + 5
 
+            sleep(2)
+            puts "~~~~~~~~~~-o-~~~~~~~~~~"
+
           elsif robiarz_zadanek.include? "krów" or robiarz_zadanek.include? "krow"
 
-            puts "Grzecznie przyprowadzasz staruszcze krówki, uśmiecha się do Ciebie dziwen, ale mówi, że jesteś złoty człowiek"
+            puts "Grzecznie przyprowadzasz staruszce krówki, uśmiecha się do Ciebie dziwen, ale mówi, że jesteś złoty człowiek"
                   pinionszki3 = pinionszki3 + 10
+
+            sleep(2)
+            puts "~~~~~~~~~~-o-~~~~~~~~~~"
 
           elsif robiarz_zadanek.include? "szczur"
 
             puts "Po ciemszkiej walce i odprawieniu kilku rytuałów, udało Ci się odpedzić ducha Króla Szczurów, staruszka bardzo Ci dziękuje, ale przez moment masz wrażenie, że jej oczy były zupełnie białe"
                  pinionszki3 = pinionszki3 + 15
 
+            sleep(2)
+            puts "~~~~~~~~~~-o-~~~~~~~~~~"
+
           else
 
             puts "Ej, no tego nie możesz zrobić..."
+
+            sleep(2)
+            puts "~~~~~~~~~~-o-~~~~~~~~~~"
 
           end
 
@@ -88,11 +107,17 @@ def wioska(pinionszki3)
 
       puts "Więc cóż, chyba wracamy..."
 
+      sleep(2)
+      puts "~~~~~~~~~~-o-~~~~~~~~~~"
+
       break
 
     end
 
-    puts "Wychodząc do wioski, po ciemszkiej pracce, masz teraz #{pinionszki3} pinionszków!"
+    puts "Wracając do wioski, po ciemszkiej pracce, masz teraz #{pinionszki3} pinionszków!"
+
+    sleep(2)
+    puts "~~~~~~~~~~-o-~~~~~~~~~~"
 
   end
 
@@ -113,17 +138,26 @@ while true
 
     pinionszki = sklep(ekwipuneczek, pinionszki)
 
-    puts "A pinionszków masz tyle #{pinionszki}"
+    puts "Stan erpeżkowego konta wynosi: #{pinionszki} pinionszków"
+
+    sleep(2)
+    puts "~~~~~~~~~~-o-~~~~~~~~~~"
 
   elsif giereczkowacz.include? "wioska"
 
     pinionszki = wioska(pinionszki)
 
-    puts "Oj, zarobiliśym troszku, masz teraz #{pinionszki} pinionszków"
+    puts "Oj, zarobiliśmy troszku, masz teraz #{pinionszki} pinionszków"
+
+    sleep(2)
+    puts "~~~~~~~~~~-o-~~~~~~~~~~"
 
   else
 
     puts "Na razie możesz iść tylko do sklepu i dziwen wioski, przykro mje"
+
+    sleep(2)
+    puts "~~~~~~~~~~-o-~~~~~~~~~~"
 
   end
 
