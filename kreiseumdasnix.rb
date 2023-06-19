@@ -18,16 +18,16 @@ def sklep (ekwipuneczek2, pinionszki2)
 
           kupiowarz = gets.chomp.to_i
 
-      if 0 < kupiowarz and kupiowarz <= sklep_rzeczy.length()
+          if 0 < kupiowarz and kupiowarz <= sklep_rzeczy.length()
 
-            puts "Kupiono #{sklep_rzeczy[kupiowarz-1]}"
-            ekwipuneczek2 << sklep_rzeczy[kupiowarz-1]
+                puts "Kupiono #{sklep_rzeczy[kupiowarz-1]}"
+                ekwipuneczek2 << sklep_rzeczy[kupiowarz-1]
 
-            pinionszki2 -= 5
+                pinionszki2 -= 5
 
-      end
+          end
 
-      elsif sklepiowarz.to_s.chomp == "nie" or kupiowarz.to_s.chomp == "nie"
+      elsif sklepiowarz.to_s.chomp == "nie"
 
         break
 
